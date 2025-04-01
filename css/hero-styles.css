@@ -6,6 +6,7 @@
   justify-content: center;
   padding: 100px 0;
   overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 .hero-flex-container {
@@ -61,6 +62,11 @@
   max-width: 800px; /* Limit width of description */
   margin: 0 auto; /* Center the description */
   text-align: center;
+  color: white; /* Make description text white */
+}
+
+.hero-description p {
+  color: white; /* Ensure paragraph text is white */
 }
 
 .hero-description .accent-line {
@@ -122,4 +128,49 @@
 
 @media screen and (max-width: 480px) {
   /* Removed highlight styles as they now live in typing-animation.css */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(40px);
+}
+
+.circle-1 {
+  top: -150px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--primary-color) 0%, rgba(0,0,0,0) 70%);
+  animation: pulseGlow 8s infinite alternate;
+}
+
+.circle-2 {
+  bottom: -200px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-color) 0%, rgba(0,0,0,0) 70%);
+  animation: pulseGlow 10s infinite alternate-reverse;
+}
+
+.circle-3 {
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #4f46e5 0%, rgba(0,0,0,0) 70%);
+  animation: pulseGlow 12s infinite alternate;
 } 

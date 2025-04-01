@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hero-styles.css">
     <link rel="stylesheet" href="css/typing-animation.css">
-    <link rel="stylesheet" href="css/mobile-fixes.css">
 </head>
 
 <body>
@@ -62,7 +61,7 @@
         <div class="container">
             <div class="hero-flex-container">
                 <div class="hero-content">
-                    <div class="hero-tag"><span style="color: white !important;">Innovative</span> <span style="color: white !important;">Powerful</span> <span style="color: white !important;">Intelligent</span></div>
+                    <div class="hero-tag"><span>Innovative</span> <span>Powerful</span> <span>Intelligent</span></div>
                     <div class="hero-headline">
                         <h1>Transforming Concepts into</h1>
                         <div class="creative-title">
