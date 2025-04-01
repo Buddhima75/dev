@@ -1,0 +1,63 @@
+/* Mobile fixes for Core Services section */
+@media screen and (max-width: 768px) {
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  
+  .feature-card p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .feature-card {
+    padding: 0.75rem;
+  }
+  
+  .feature-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+} 
