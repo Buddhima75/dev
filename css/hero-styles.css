@@ -173,4 +173,30 @@
   height: 400px;
   background: radial-gradient(circle, #4f46e5 0%, rgba(0,0,0,0) 70%);
   animation: pulseGlow 12s infinite alternate;
+}
+
+/* Click Effect Styles */
+.click-circle {
+    position: absolute;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    transform: translate(-50%, -50%);
+    animation: clickRipple 1s ease-out forwards;
+    z-index: 3;
+}
+
+@keyframes clickRipple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 } 

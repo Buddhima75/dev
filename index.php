@@ -149,29 +149,183 @@
         </div>
     </section>
 
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p>A systematic approach to delivering exceptional results</p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="process-left-box">
+                <div class="process-left-box-inner">
+                    <div class="process-left-box-front">
+                        <div class="book-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Don't Judge Book</h3>
+                        <p>By its cover</p>
+                    </div>
+                    <div class="process-left-box-back">
+                        <div class="book-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Know the Process</h3>
+                        <p>Before get the job Done.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-container">
+                <div class="process-circle">
+                    <div class="process-ring"></div>
+
+                    <!-- Center descriptions -->
+                    <div class="process-description" data-step="discover">
+                        <p>We start by listening to your goals, ideas, and requirements. This is where we understand your vision and identify the best way to bring it to life.</p>
+                    </div>
+                    <div class="process-description" data-step="plan">
+                        <p>Next, we create a detailed roadmap. From design concepts to functionality needs, we carefully plan every step to ensure a seamless project.</p>
+                    </div>
+                    <div class="process-description" data-step="design">
+                        <p>Our design team works on visual concepts and layouts, focusing on aesthetics and usability to create an engaging and unique user experience.</p>
+                    </div>
+                    <div class="process-description" data-step="develop">
+                        <p>Our developers build your website using cutting-edge technology, ensuring it's fast, responsive, and scalable. Every feature is tailored to perfection.</p>
+                    </div>
+                    <div class="process-description" data-step="test">
+                        <p>Before launch, we rigorously test your website for functionality, performance, and security to guarantee a flawless user experience.</p>
+                    </div>
+                    <div class="process-description" data-step="deliver">
+                        <p>We launch your website and provide ongoing support to keep it running smoothly. With our free hosting for the first year, you're ready to succeed!</p>
+                    </div>
+
+                    <!-- Process steps -->
+                    <div class="process-step discover" data-step="discover">
+                        <div class="step-icon"><i class="fas fa-search"></i></div>
+                        <div class="step-label">Discover</div>
+                    </div>
+                    <div class="process-step plan" data-step="plan">
+                        <div class="step-icon"><i class="fas fa-tasks"></i></div>
+                        <div class="step-label">Plan</div>
+                    </div>
+                    <div class="process-step design" data-step="design">
+                        <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <div class="step-label">Design</div>
+                    </div>
+                    <div class="process-step develop" data-step="develop">
+                        <div class="step-icon"><i class="fas fa-code"></i></div>
+                        <div class="step-label">Develop</div>
+                    </div>
+                    <div class="process-step test" data-step="test">
+                        <div class="step-icon"><i class="fas fa-vial"></i></div>
+                        <div class="step-label">Test</div>
+                    </div>
+                    <div class="process-step deliver" data-step="deliver">
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="step-label">Deliver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
+
             <div class="section-title">
-                <h2>About Us</h2>
+                <div class="title-row">
+                    <span class="subtitle">FEATURES</span><br>
+                    <h2>Empowering Digital Innovation</h2>
+                </div>
+                <p class="section-subtitle">Transforming ideas into powerful digital solutions</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>We Create Digital Solutions That Drive Success</h3>
-                    <p>TechSphere is a leading software development company dedicated to providing cutting-edge solutions for businesses across various industries. With over 8 years of experience, we've helped hundreds of clients achieve their digital transformation goals.</p>
-                    <p>Our team of experts combines technical excellence with creative thinking to deliver innovative solutions that solve complex business challenges. We believe in building long-term relationships with our clients through transparency, collaboration, and a commitment to excellence.</p>
-                    <ul>
-                        <li>Experienced team of software engineers and designers</li>
-                        <li>Custom-tailored solutions to meet specific business needs</li>
-                        <li>Agile development methodology for faster, better results</li>
-                        <li>Ongoing support and maintenance for all projects</li>
-                    </ul>
+                    <h3>Delivering AI-Powered Solutions</h3>
+                    <p>Transform your business with our innovative approach to AI-Powered Solutions. We specialize in delivering cutting-edge artificial intelligence applications that enhance efficiency, drive insights, and propel your organization into the future.</p>
+                    <p>Unlock the full potential of advanced technology with our tailored solutions, shaping a smarter and more competitive landscape for your industry.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-code"></i>
+                            <div class="feature-text">
+                                <h4>Expert Development Team</h4>
+                                <p>Skilled software engineers and designers</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-cogs"></i>
+                            <div class="feature-text">
+                                <h4>Custom Solutions</h4>
+                                <p>Tailored to your business needs</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <div class="feature-text">
+                                <h4>Agile Methodology</h4>
+                                <p>Fast and efficient development</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <div class="feature-text">
+                                <h4>Ongoing Support</h4>
+                                <p>Continuous maintenance and updates</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/about-img.jpg" alt="Team working together on software development">
+                    <img src="images/ab.png" alt="Team working together on software development">
+                    <div class="experience-badge">
+                        <span class="years">8+</span>
+                        <span class="text">Years of<br>Experience</span>
+                    </div>
                 </div>
-                <div class="right-side-image">
-                    <img src="images/aaaa.png" alt="AI Technology" class="large-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry-Focused Solutions Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-row">
+                    <span class="subtitle">WHAT WE DO</span><br>
+                    <h2>Industry-Focused Solutions</h2>
+                </div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/Virtual.png" alt="Virtual Reality">
+                    </div>
+                    <div class="service-content">
+                        <h3>Virtual Reality</h3>
+                        <p>Immerse yourself in a new dimension with our Virtual Reality experiences, offering unparalleled realism and interactive.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/Machine.png" alt="Machine Learning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Machine Learning</h3>
+                        <p>Unleash the power of data-driven insights with our Machine Learning solutions, driving informed decision-making.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/Internet.png" alt="Internet of Things">
+                    </div>
+                    <div class="service-content">
+                        <h3>Internet of Things</h3>
+                        <p>Connect, control, and innovate with our Internet of Things solutions, seamlessly integrating devices revolutionize.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -242,12 +396,7 @@
                 <h2>Our Portfolio</h2>
             </div>
 
-            <ul class="portfolio-filter">
-                <li class="active" data-filter="all">All</li>
-                <li data-filter="web">Web Development</li>
-                <li data-filter="mobile">Mobile Apps</li>
-                <li data-filter="software">Custom Software</li>
-            </ul>
+
 
             <div class="portfolio-grid">
                 <div class="portfolio-item web">
@@ -297,142 +446,273 @@
                         <p>Custom Software, Data Analytics</p>
                     </div>
                 </div>
+
+
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary">View More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages Section -->
+    <section class="pricing-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Packages</h2>
+                <p>Choose the perfect web development package for your needs</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Package -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="pricing-header">
+                        <h3>Web Development</h3>
+                        <p class="package-type">basic package</p>
+                    </div>
+                    <div class="pricing-price">
+                        <h4>LKR35,000/=</h4>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 to 5 Pages</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Free hosting 1Year</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 Year Free Domain</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Free Email Plans</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>WordPress Website</span>
+                        </div>
+                    </div>
+                    <button class="btn-order">PLACE THE ORDER</button>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="pricing-card popular">
+                    <div class="popular-tag">POPULAR</div>
+                    <div class="pricing-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="pricing-header">
+                        <h3>Web Development</h3>
+                        <p class="package-type">Standard package</p>
+                    </div>
+                    <div class="pricing-price">
+                        <h4>LKR75,000/=</h4>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 to 10 Pages</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Free hosting 1Year</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 Year Free Domain</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Free Email Plans</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Custom Build</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Add Your Bussiness to Google map</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Fast Dilivary</span>
+                        </div>
+                    </div>
+                    <button class="btn-order">PLACE THE ORDER</button>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="pricing-header">
+                        <h3>Web Development</h3>
+                        <p class="package-type">Premium package</p>
+                    </div>
+                    <div class="pricing-price">
+                        <h4>LKR170,000/=</h4>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 to 20 Pages</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Free hosting 1Year</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>1 Year Free Domain</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Free Email Plans</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Custom Build</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Add Your Bussiness to Google map</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Fast Dilivary</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Payment Intigration</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>E commerce Features</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Social media creation and handling for 1 month</span>
+                        </div>
+                    </div>
+                    <button class="btn-order">PLACE THE ORDER</button>
+                </div>
+
+                <!-- Custom Package -->
+                <div class="pricing-card custom">
+                    <div class="pricing-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="pricing-header">
+                        <h3>Web Development</h3>
+                        <p class="package-type">Custom</p>
+                    </div>
+                    <div class="pricing-price">
+                        <h4>LKR200,000+</h4>
+                    </div>
+                    <div class="pricing-features custom-features">
+                        <div class="feature">
+                            <i class="fas fa-phone"></i>
+                            <span>Contact us for advance solutions</span>
+                        </div>
+                    </div>
+                    <button class="btn-order contact">CONTACT US</button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="section" style="background-color: #f1f5f9;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Team</h2>
-            </div>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="team-img">
-                        <img src="images/team-1.jpg" alt="Michael Johnson - CEO & Founder">
-                    </div>
-                    <div class="team-info">
-                        <h3>Michael Johnson</h3>
-                        <p>CEO & Founder</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="team-member">
-                    <div class="team-img">
-                        <img src="images/team-2.jpg" alt="Sarah Williams - CTO">
-                    </div>
-                    <div class="team-info">
-                        <h3>Sarah Williams</h3>
-                        <p>CTO</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="team-img">
-                        <img src="images/team-3.jpg" alt="David Chen - Lead Developer">
-                    </div>
-                    <div class="team-info">
-                        <h3>David Chen</h3>
-                        <p>Lead Developer</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="team-img">
-                        <img src="images/team-4.jpg" alt="Emily Rodriguez - UX/UI Designer">
-                    </div>
-                    <div class="team-info">
-                        <h3>Emily Rodriguez</h3>
-                        <p>UX/UI Designer</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's Talk About Your Project</h3>
-                    <p>Have a project in mind? We'd love to hear about it. Fill out the form and we'll get back to you as soon as possible.</p>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>123 Tech Street, Silicon Valley, CA 94123</p>
-                        </div>
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h2>Let's Create Something Amazing Together</h2>
+                        <p class="contact-subtitle">Have an idea? We're here to help bring it to life.</p>
                     </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <div class="contact-info-grid">
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Visit Us</h4>
+
+                                        <p>Malabe, Colombo, Sri Lanka</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Email Us</h4>
+                                        <p>info@devlk.com</p>
+                                        <p>rasika@devlk.com</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Call Us</h4>
+                                        <p>+94 76 979 1233</p>
+                                        <p>+94 74 209 9194</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
                         </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@techsphere.com</p>
+
+                        <div class="contact-form-wrapper">
+                            <form class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                        <span class="focus-border"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                        <span class="focus-border"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                    <span class="focus-border"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" placeholder="Tell us about your project..." required></textarea>
+                                    <span class="focus-border"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn-submit">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject">
-                        </div>
-
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -443,7 +723,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>TechSphere</h3>
+                    <div class="footer-logo">
+                        <img src="images/dev.png" alt="TechSphere Logo">
+                        
+                    </div>
                     <p>We create innovative digital solutions that help businesses grow and succeed in today's competitive market.</p>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -456,11 +739,11 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Custom Software Development</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile App Development</a></li>
-                        <li><a href="#">Cloud Solutions</a></li>
-                        <li><a href="#">Data Analytics</a></li>
+                        <li>Custom Software Development</li>
+                        <li>Web Development</li>
+                        <li>Mobile App Development</li>
+                        <li>Cloud Solutions</li>
+                        <li>Data Analytics</li>
                     </ul>
                 </div>
 
@@ -652,6 +935,37 @@
                 // Start observing the title
                 observer.observe(coreServicesTitle);
             }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all process steps and descriptions
+            const steps = document.querySelectorAll('.process-step');
+            const descriptions = document.querySelectorAll('.process-description');
+
+            // Set initial active state (Discover)
+            const initialStep = document.querySelector('.process-step.discover');
+            const initialDesc = document.querySelector('.process-description[data-step="discover"]');
+            initialStep.classList.add('active');
+            initialDesc.classList.add('active');
+
+            // Add click handlers to each step
+            steps.forEach(step => {
+                step.addEventListener('click', function() {
+                    // Remove active class from all steps and descriptions
+                    steps.forEach(s => s.classList.remove('active'));
+                    descriptions.forEach(d => d.classList.remove('active'));
+
+                    // Add active class to clicked step
+                    this.classList.add('active');
+
+                    // Show corresponding description
+                    const stepName = this.getAttribute('data-step');
+                    const description = document.querySelector(`.process-description[data-step="${stepName}"]`);
+                    description.classList.add('active');
+                });
+            });
         });
     </script>
 </body>
