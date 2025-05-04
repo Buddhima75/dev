@@ -22,32 +22,24 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hero-styles.css">
     <link rel="stylesheet" href="css/typing-animation.css">
+    <link rel="stylesheet" href="css/landing-animation.css">
+
+    <style>
+        .animate-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-item.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <img src="images/dev.png" alt="TechSphere" class="logo-img">
-                </a>
-
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <?php include 'header.php'; ?>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -98,12 +90,7 @@
                 </div>
             </div>
         </div>
-        <div class="ai-robot-image-left">
-            <img src="images/aa2.png" alt="AI Robot Left" class="floating-robot">
-        </div>
-        <div class="ai-robot-image">
-            <img src="images/aa.png" alt="AI Robot" class="floating-robot">
-        </div>
+       
         <div class="particles-container" id="particles-js"></div>
     </section>
 
@@ -181,23 +168,31 @@
                     <div class="process-ring"></div>
 
                     <!-- Center descriptions -->
-                    <div class="process-description" data-step="discover">
-                        <p>We start by listening to your goals, ideas, and requirements. This is where we understand your vision and identify the best way to bring it to life.</p>
-                    </div>
-                    <div class="process-description" data-step="plan">
-                        <p>Next, we create a detailed roadmap. From design concepts to functionality needs, we carefully plan every step to ensure a seamless project.</p>
-                    </div>
-                    <div class="process-description" data-step="design">
-                        <p>Our design team works on visual concepts and layouts, focusing on aesthetics and usability to create an engaging and unique user experience.</p>
-                    </div>
-                    <div class="process-description" data-step="develop">
-                        <p>Our developers build your website using cutting-edge technology, ensuring it's fast, responsive, and scalable. Every feature is tailored to perfection.</p>
-                    </div>
-                    <div class="process-description" data-step="test">
-                        <p>Before launch, we rigorously test your website for functionality, performance, and security to guarantee a flawless user experience.</p>
-                    </div>
-                    <div class="process-description" data-step="deliver">
-                        <p>We launch your website and provide ongoing support to keep it running smoothly. With our free hosting for the first year, you're ready to succeed!</p>
+                    <div class="process-descriptions">
+                        <div class="process-description" data-step="discover">
+                            <h3>Discovery Phase</h3>
+                            <p>We start by listening to your goals, ideas, and requirements. This is where we understand your vision and identify the best way to bring it to life.</p>
+                        </div>
+                        <div class="process-description" data-step="plan">
+                            <h3>Planning Phase</h3>
+                            <p>Next, we create a detailed roadmap. From design concepts to functionality needs, we carefully plan every step to ensure a seamless project.</p>
+                        </div>
+                        <div class="process-description" data-step="design">
+                            <h3>Design Phase</h3>
+                            <p>Our design team works on visual concepts and layouts, focusing on aesthetics and usability to create an engaging and unique user experience.</p>
+                        </div>
+                        <div class="process-description" data-step="develop">
+                            <h3>Development Phase</h3>
+                            <p>Our developers build your website using cutting-edge technology, ensuring it's fast, responsive, and scalable. Every feature is tailored to perfection.</p>
+                        </div>
+                        <div class="process-description" data-step="test">
+                            <h3>Testing Phase</h3>
+                            <p>Before launch, we rigorously test your website for functionality, performance, and security to guarantee a flawless user experience.</p>
+                        </div>
+                        <div class="process-description" data-step="deliver">
+                            <h3>Delivery Phase</h3>
+                            <p>We launch your website and provide ongoing support to keep it running smoothly. With our free hosting for the first year, you're ready to succeed!</p>
+                        </div>
                     </div>
 
                     <!-- Process steps -->
@@ -231,10 +226,9 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section animate-on-scroll">
         <div class="container">
-
-            <div class="section-title">
+            <div class="section-title animate-item">
                 <div class="title-row">
                     <span class="subtitle">FEATURES</span><br>
                     <h2>Empowering Digital Innovation</h2>
@@ -242,33 +236,33 @@
                 <p class="section-subtitle">Transforming ideas into powerful digital solutions</p>
             </div>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text animate-item">
                     <h3>Delivering AI-Powered Solutions</h3>
                     <p>Transform your business with our innovative approach to AI-Powered Solutions. We specialize in delivering cutting-edge artificial intelligence applications that enhance efficiency, drive insights, and propel your organization into the future.</p>
                     <p>Unlock the full potential of advanced technology with our tailored solutions, shaping a smarter and more competitive landscape for your industry.</p>
                     <div class="about-features">
-                        <div class="feature-item">
+                        <div class="feature-item animate-item">
                             <i class="fas fa-code"></i>
                             <div class="feature-text">
                                 <h4>Expert Development Team</h4>
                                 <p>Skilled software engineers and designers</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item animate-item">
                             <i class="fas fa-cogs"></i>
                             <div class="feature-text">
                                 <h4>Custom Solutions</h4>
                                 <p>Tailored to your business needs</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item animate-item">
                             <i class="fas fa-rocket"></i>
                             <div class="feature-text">
                                 <h4>Agile Methodology</h4>
                                 <p>Fast and efficient development</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item animate-item">
                             <i class="fas fa-headset"></i>
                             <div class="feature-text">
                                 <h4>Ongoing Support</h4>
@@ -277,9 +271,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
+                <div class="about-image animate-item">
                     <img src="images/ab.png" alt="Team working together on software development">
-                    <div class="experience-badge">
+                    <div class="experience-badge animate-item">
                         <span class="years">8+</span>
                         <span class="text">Years of<br>Experience</span>
                     </div>
@@ -289,42 +283,42 @@
     </section>
 
     <!-- Industry-Focused Solutions Section -->
-    <section class="section">
+    <section class="section animate-on-scroll">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-item">
                 <div class="title-row">
-                    <span class="subtitle">WHAT WE DO</span><br>
-                    <h2>Industry-Focused Solutions</h2>
+                    <span class="subtitle animate-item">WHAT WE DO</span><br>
+                    <h2 class="animate-item">Industry-Focused Solutions</h2>
                 </div>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="images/Virtual.png" alt="Virtual Reality">
+                <div class="service-card animate-item">
+                    <div class="service-image animate-item">
+                        <img src="images/Virtual.png" alt="Virtual Reality" class="animate-item">
                     </div>
                     <div class="service-content">
-                        <h3>Virtual Reality</h3>
-                        <p>Immerse yourself in a new dimension with our Virtual Reality experiences, offering unparalleled realism and interactive.</p>
+                        <h3 class="animate-item">Virtual Reality</h3>
+                        <p class="animate-item">Immerse yourself in a new dimension with our Virtual Reality experiences, offering unparalleled realism and interactive.</p>
                     </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="images/Machine.png" alt="Machine Learning">
+                <div class="service-card animate-item">
+                    <div class="service-image animate-item">
+                        <img src="images/Machine.png" alt="Machine Learning" class="animate-item">
                     </div>
                     <div class="service-content">
-                        <h3>Machine Learning</h3>
-                        <p>Unleash the power of data-driven insights with our Machine Learning solutions, driving informed decision-making.</p>
+                        <h3 class="animate-item">Machine Learning</h3>
+                        <p class="animate-item">Unleash the power of data-driven insights with our Machine Learning solutions, driving informed decision-making.</p>
                     </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="images/Internet.png" alt="Internet of Things">
+                <div class="service-card animate-item">
+                    <div class="service-image animate-item">
+                        <img src="images/Internet.png" alt="Internet of Things" class="animate-item">
                     </div>
                     <div class="service-content">
-                        <h3>Internet of Things</h3>
-                        <p>Connect, control, and innovate with our Internet of Things solutions, seamlessly integrating devices revolutionize.</p>
+                        <h3 class="animate-item">Internet of Things</h3>
+                        <p class="animate-item">Connect, control, and innovate with our Internet of Things solutions, seamlessly integrating devices revolutionize.</p>
                     </div>
                 </div>
             </div>
@@ -725,7 +719,7 @@
                 <div class="footer-col">
                     <div class="footer-logo">
                         <img src="images/dev.png" alt="TechSphere Logo">
-                        
+
                     </div>
                     <p>We create innovative digital solutions that help businesses grow and succeed in today's competitive market.</p>
                     <div class="team-social">
@@ -783,8 +777,8 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // Initialize particles.js
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particles.js
             if (typeof particlesJS !== 'undefined') {
                 particlesJS('particles-js', {
                     "particles": {
@@ -837,103 +831,95 @@
                         },
                         "move": {
                             "enable": true,
-                            "speed": 2,
+                            "speed": 3,
                             "direction": "none",
                             "random": false,
                             "straight": false,
-                            "out_mode": "out",
-                            "bounce": false,
+                            "out_mode": "bounce",
+                            "bounce": true,
                             "attract": {
-                                "enable": false,
+                                "enable": true,
                                 "rotateX": 600,
                                 "rotateY": 1200
                             }
                         }
                     },
                     "interactivity": {
-                        "detect_on": "canvas",
+                        "detect_on": "window",
                         "events": {
                             "onhover": {
-                                "enable": true,
-                                "mode": "grab"
+                                "enable": false,
+                                "mode": "repulse"
                             },
                             "onclick": {
                                 "enable": true,
                                 "mode": "push"
                             },
-                            "resize": true
+                            "resize": true,
+                            "touchstart": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "touchmove": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
                         },
                         "modes": {
-                            "grab": {
-                                "distance": 140,
-                                "line_linked": {
-                                    "opacity": 1
-                                }
-                            },
-                            "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
-                                "speed": 3
-                            },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
-                            },
                             "push": {
                                 "particles_nb": 4
                             },
                             "remove": {
                                 "particles_nb": 2
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
                             }
                         }
                     },
                     "retina_detect": true
                 });
             }
-        });
-    </script>
 
-    <script>
-        // Core Services Title Animation
-        document.addEventListener('DOMContentLoaded', function() {
+            // Animation observer function
+            const observeElements = (elements, options = {}) => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.2,
+                    ...options
+                });
+
+                elements.forEach(el => observer.observe(el));
+            };
+
+            // Observe Core Services title and cards
             const coreServicesTitle = document.querySelector('.core-services-title');
-            const featuresGrid = document.querySelector('.features-grid');
-
             if (coreServicesTitle) {
-                const observer = new IntersectionObserver(
-                    function(entries) {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                // Title is now visible in the viewport
-                                entry.target.style.opacity = '1';
-                                entry.target.style.transform = 'translateY(0) scale(1)';
+                observeElements([coreServicesTitle]);
+            }
 
-                                // Add animated class after a short delay
-                                setTimeout(() => {
-                                    entry.target.classList.add('animated');
-                                }, 400);
+            const featureCards = document.querySelectorAll('.service-features .feature-card');
+            if (featureCards.length) {
+                observeElements(featureCards);
+            }
 
-                                // Animate features grid with a delay
-                                if (featuresGrid) {
-                                    setTimeout(() => {
-                                        featuresGrid.style.opacity = '1';
-                                        featuresGrid.style.transform = 'translateY(0)';
-                                    }, 800); // 800ms delay after title animation starts
-                                }
+            // Observe Process section title
+            const processTitle = document.querySelector('.process-section .section-title');
+            if (processTitle) {
+                observeElements([processTitle]);
+            }
 
-                                // Stop observing once animation is triggered
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, {
-                        threshold: 0.2
-                    } // 20% of the element must be visible
-                );
-
-                // Start observing the title
-                observer.observe(coreServicesTitle);
+            // Other service cards
+            const serviceCards = document.querySelectorAll('.services-grid .service-card');
+            if (serviceCards.length) {
+                observeElements(serviceCards);
             }
         });
     </script>
@@ -964,6 +950,129 @@
                     const stepName = this.getAttribute('data-step');
                     const description = document.querySelector(`.process-description[data-step="${stepName}"]`);
                     description.classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Animation Observer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Process section animations
+                        if (entry.target.closest('.process-section')) {
+                            const section = entry.target.closest('.process-section');
+
+                            // Animate title components
+                            section.querySelector('.section-title').classList.add('visible');
+                            setTimeout(() => {
+                                section.querySelector('.section-title h2').classList.add('visible');
+                            }, 200);
+                            setTimeout(() => {
+                                section.querySelector('.section-title p').classList.add('visible');
+                            }, 400);
+
+                            // Animate process components
+                            setTimeout(() => {
+                                section.querySelector('.process-left-box').classList.add('visible');
+                            }, 600);
+
+                            setTimeout(() => {
+                                section.querySelector('.process-circle').classList.add('visible');
+                            }, 800);
+
+                            // Animate process steps
+                            const steps = section.querySelectorAll('.process-step');
+                            steps.forEach((step, index) => {
+                                setTimeout(() => {
+                                    step.classList.add('visible');
+                                }, 1000 + (index * 200));
+                            });
+
+                            // Animate process descriptions
+                            const descriptions = section.querySelectorAll('.process-description');
+                            descriptions.forEach((desc, index) => {
+                                setTimeout(() => {
+                                    desc.classList.add('visible');
+                                }, 2200 + (index * 200));
+                            });
+                        }
+
+                        // Core Services animations
+                        if (entry.target.classList.contains('core-services-title')) {
+                            entry.target.classList.add('visible');
+                        }
+
+                        // Feature cards animations
+                        if (entry.target.classList.contains('feature-card')) {
+                            entry.target.classList.add('visible');
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            // Observe Process section
+            const processSection = document.querySelector('.process-section');
+            if (processSection) {
+                observer.observe(processSection);
+            }
+
+            // Observe Core Services title
+            const coreServicesTitle = document.querySelector('.core-services-title');
+            if (coreServicesTitle) {
+                observer.observe(coreServicesTitle);
+            }
+
+            // Observe feature cards
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('animate-on-scroll')) {
+                            const animateItems = entry.target.querySelectorAll('.animate-item');
+                            animateItems.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('animate-visible');
+                                }, index * 200);
+                            });
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.animate-on-scroll');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+    <script>
+        // Navigation handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    window.location.href = page;
                 });
             });
         });

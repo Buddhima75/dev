@@ -1,0 +1,263 @@
+@keyframes landingFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero section animations */
+.hero-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: landingFadeInUp 0.8s ease-out forwards;
+}
+
+/* Hero tag animations */
+.hero-tag {
+    animation-delay: 0.2s;
+}
+
+.hero-tag span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: landingFadeInUp 0.6s ease-out forwards;
+}
+
+.hero-tag span:nth-child(1) { animation-delay: 0.4s; }
+.hero-tag span:nth-child(2) { animation-delay: 0.6s; }
+.hero-tag span:nth-child(3) { animation-delay: 0.8s; }
+
+/* Headline animations */
+.hero-headline {
+    animation-delay: 1s;
+}
+
+.hero-headline h1 {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: landingFadeInUp 0.8s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+/* Description animations */
+.hero-description {
+    animation-delay: 1.6s;
+}
+
+.hero-description .accent-line {
+    width: 0;
+    transition: width 0.8s ease-out;
+    animation: expandLine 0.8s ease-out forwards;
+    animation-delay: 1.8s;
+}
+
+@keyframes expandLine {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.hero-description p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: landingFadeInUp 0.8s ease-out forwards;
+    animation-delay: 2s;
+}
+
+/* Button animations */
+.hero-btns {
+    animation-delay: 2.2s;
+}
+
+.hero-btns a {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: landingFadeInUp 0.8s ease-out forwards;
+}
+
+.hero-btns a:nth-child(1) { animation-delay: 2.4s; }
+.hero-btns a:nth-child(2) { animation-delay: 2.6s; }
+
+/* Stats animations */
+.hero-stats {
+    animation-delay: 2.8s;
+}
+
+.hero-stats .stat-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: landingFadeInUp 0.8s ease-out forwards;
+}
+
+.hero-stats .stat-item:nth-child(1) { animation-delay: 3s; }
+.hero-stats .stat-item:nth-child(2) { animation-delay: 3.2s; }
+.hero-stats .stat-item:nth-child(3) { animation-delay: 3.4s; }
+
+/* Process section animations */
+.process-section .section-title,
+.process-section .section-title h2,
+.process-section .section-title p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.process-section .section-title.visible,
+.process-section .section-title h2.visible,
+.process-section .section-title p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.process-section .section-title h2.visible {
+    transition-delay: 0.2s;
+}
+
+.process-section .section-title p.visible {
+    transition-delay: 0.4s;
+}
+
+/* Process components animations */
+.process-left-box,
+.process-circle,
+.process-step,
+.process-description {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.process-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+    display: none;
+}
+
+.process-description.active {
+    display: block;
+    opacity: 1;
+}
+
+.process-description p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.process-left-box.visible,
+.process-circle.visible,
+.process-step.visible,
+.process-description.visible {
+    opacity: 1;
+   
+}
+
+/* Sequential delays for process steps */
+.process-step.discover.visible { transition-delay: 0.2s; }
+.process-step.plan.visible { transition-delay: 0.4s; }
+.process-step.design.visible { transition-delay: 0.6s; }
+.process-step.develop.visible { transition-delay: 0.8s; }
+.process-step.test.visible { transition-delay: 1s; }
+.process-step.deliver.visible { transition-delay: 1.2s; }
+
+/* Core Services section animations */
+.core-services-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service-features .feature-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Add visible class for JavaScript to toggle */
+.core-services-title.visible,
+.service-features .feature-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for each feature card */
+.service-features .feature-card:nth-child(1).visible { transition-delay: 0.2s; }
+.service-features .feature-card:nth-child(2).visible { transition-delay: 0.4s; }
+.service-features .feature-card:nth-child(3).visible { transition-delay: 0.6s; }
+.service-features .feature-card:nth-child(4).visible { transition-delay: 0.8s; }
+
+/* Service cards animation */
+.services-grid .service-card {
+    opacity: 0;
+    animation: landingFadeInUp 0.8s ease-out forwards;
+}
+
+/* Delays for each service card */
+.services-grid .service-card:nth-child(1) { animation-delay: 0.2s; }
+.services-grid .service-card:nth-child(2) { animation-delay: 0.4s; }
+.services-grid .service-card:nth-child(3) { animation-delay: 0.6s; }
+.services-grid .service-card:nth-child(4) { animation-delay: 0.8s; }
+.services-grid .service-card:nth-child(5) { animation-delay: 1.0s; }
+.services-grid .service-card:nth-child(6) { animation-delay: 1.2s; }
+
+/* Industry-Focused Solutions section animations */
+.animate-on-scroll .animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll .animate-item.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sequential delays for Industry-Focused Solutions */
+.animate-on-scroll .section-title .subtitle.animate-visible { transition-delay: 0.2s; }
+.animate-on-scroll .section-title h2.animate-visible { transition-delay: 0.4s; }
+
+/* Service Card Animations */
+.animate-on-scroll .services-grid .service-card.animate-visible { transition-delay: 0.6s; }
+
+/* Service Card Inner Content Animations */
+.animate-on-scroll .service-card .service-image.animate-visible { transition-delay: 0.8s; }
+.animate-on-scroll .service-card .service-image img.animate-visible { 
+    transition-delay: 1s;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, scale 0.6s ease-out;
+    transform-origin: center;
+}
+.animate-on-scroll .service-card .service-content h3.animate-visible { transition-delay: 1.2s; }
+.animate-on-scroll .service-card .service-content p.animate-visible { transition-delay: 1.4s; }
+
+/* Second card delays */
+.animate-on-scroll .services-grid .service-card:nth-child(2) .service-image.animate-visible { transition-delay: 1.0s; }
+.animate-on-scroll .services-grid .service-card:nth-child(2) .service-image img.animate-visible { transition-delay: 1.2s; }
+.animate-on-scroll .services-grid .service-card:nth-child(2) .service-content h3.animate-visible { transition-delay: 1.4s; }
+.animate-on-scroll .services-grid .service-card:nth-child(2) .service-content p.animate-visible { transition-delay: 1.6s; }
+
+/* Third card delays */
+.animate-on-scroll .services-grid .service-card:nth-child(3) .service-image.animate-visible { transition-delay: 1.2s; }
+.animate-on-scroll .services-grid .service-card:nth-child(3) .service-image img.animate-visible { transition-delay: 1.4s; }
+.animate-on-scroll .services-grid .service-card:nth-child(3) .service-content h3.animate-visible { transition-delay: 1.6s; }
+.animate-on-scroll .services-grid .service-card:nth-child(3) .service-content p.animate-visible { transition-delay: 1.8s; }
+
+/* Add scale effect for images */
+.animate-on-scroll .service-card .service-image img {
+    transform: scale(0.8) translateY(30px);
+}
+.animate-on-scroll .service-card .service-image img.animate-visible {
+    transform: scale(1) translateY(0);
+} 
