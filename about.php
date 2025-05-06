@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - TechSphere</title>
-    <meta name="description" content="Learn more about TechSphere - Our mission, vision, and team.">
+    <meta name="description" content="Learn more about TechSphere and our mission to deliver innovative software solutions">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -23,6 +23,85 @@
     <link rel="stylesheet" href="css/hero-styles.css">
     <link rel="stylesheet" href="css/typing-animation.css">
     <link rel="stylesheet" href="css/landing-animation.css">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            margin-bottom: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .hero-tag span {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hero-headline h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Make sure header is above particles */
+        header {
+            position: relative;
+            z-index: 3;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,45 +109,22 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-circle circle-1"></div>
-            <div class="hero-circle circle-2"></div>
-            <div class="hero-circle circle-3"></div>
-        </div>
-        <div class="hero-flex-container">
-            <div class="hero-content">
-                <div class="hero-headline">
-                    <div class="hero-tag">
-                        <span>Innovative</span>
-                        <span>Passionate</span>
-                        <span>Expert</span>
-                    </div>
-                    <h1>About Us
-                        <span class="gradient-text">Our Story</span>
-                    </h1>
-                </div>
-                <div class="hero-description">
-                    <div class="accent-line"></div>
-                    <p>We are a team of passionate innovators, designers, and developers dedicated to transforming your digital vision into reality. With years of experience and a commitment to excellence, we deliver cutting-edge solutions that drive business growth.</p>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">8+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">200+</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Happy Clients</span>
-                    </div>
-                </div>
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span>Innovative</span>
+                <span>Passionate</span>
+                <span>Expert</span>
+            </div>
+            <div class="hero-headline">
+                <h1>About Us
+                    <span class="gradient-text">Our Story & Vision</span>
+                </h1>
+            </div>
+            <div class="hero-description">
+                <p>We are a team of passionate developers and designers dedicated to creating innovative digital solutions that help businesses thrive in the modern world.</p>
             </div>
         </div>
-       
-        <div class="particles-container" id="particles-js"></div>
     </section>
 
     <!-- About Section -->
@@ -201,6 +257,99 @@
                     window.location.href = page;
                 });
             });
+        });
+    </script>
+
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: {
+                            value: 80,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: '#ffffff'
+                        },
+                        shape: {
+                            type: 'circle'
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: false,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 2,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#ffffff',
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false,
+                            attract: {
+                                enable: true,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: 140,
+                                line_linked: {
+                                    opacity: 0.5
+                                }
+                            },
+                            push: {
+                                particles_nb: 4
+                            }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
         });
     </script>
 </body>

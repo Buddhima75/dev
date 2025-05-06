@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TechSphere</title>
-    <meta name="description" content="Get in touch with TechSphere for your software development needs. We're here to help bring your ideas to life.">
+    <meta name="description" content="Get in touch with TechSphere for innovative software solutions and digital transformation">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -23,10 +23,109 @@
     <link rel="stylesheet" href="css/hero-styles.css">
     <link rel="stylesheet" href="css/typing-animation.css">
     <link rel="stylesheet" href="css/landing-animation.css">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            margin-bottom: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .hero-tag span {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hero-headline h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Make sure header is above particles */
+        header {
+            position: relative;
+            z-index: 3;
+        }
+    </style>
 </head>
 
 <body>
     <?php include 'header.php'; ?>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span>Connect</span>
+                <span>Collaborate</span>
+                <span>Create</span>
+            </div>
+            <div class="hero-headline">
+                <h1>Contact Us
+                    <span class="gradient-text">Let's Build Together</span>
+                </h1>
+            </div>
+            <div class="hero-description">
+                <p>Have a project in mind? We'd love to hear about it. Get in touch with us and let's create something amazing together.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="section contact-section">
@@ -47,7 +146,7 @@
                                     </div>
                                     <div class="contact-details">
                                         <h4>Visit Us</h4>
-                                        <p>Malabe, Colombo, Sri Lanka</p>
+                                        <p>Malabe, Colombo,<br>Sri Lanka</p>
                                     </div>
                                 </div>
 
@@ -62,7 +161,7 @@
                                     </div>
                                 </div>
 
-                                <div class="contact-info-item">
+                                <div class="contact-info-item full-width">
                                     <div class="contact-icon">
                                         <i class="fas fa-phone-alt"></i>
                                     </div>
@@ -106,6 +205,43 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Location Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-wrapper">
+                <div class="map-content">
+                    <div class="map-info text-center">
+                        <h3>Our Location</h3>
+                        <p>Visit us at our office in Malabe, where innovation meets excellence.</p>
+                        <div class="location-details">
+                            <div class="location-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Malabe, Colombo, Sri Lanka</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+94 76 979 1233</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-frame">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.347175900541!2d79.95750771914059!3d6.914682516573097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sMalabe!5e0!3m2!1sen!2slk!4v1709703163133!5m2!1sen!2slk"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -173,17 +309,97 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // Navigation handling
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const page = this.getAttribute('data-page');
-                    window.location.href = page;
+        window.addEventListener('load', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: {
+                            value: 80,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: '#ffffff'
+                        },
+                        shape: {
+                            type: 'circle'
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: false,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 2,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#ffffff',
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false,
+                            attract: {
+                                enable: true,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: 140,
+                                line_linked: {
+                                    opacity: 0.5
+                                }
+                            },
+                            push: {
+                                particles_nb: 4
+                            }
+                        }
+                    },
+                    retina_detect: true
                 });
-            });
+            }
         });
     </script>
 </body>

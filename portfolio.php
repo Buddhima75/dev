@@ -23,6 +23,85 @@
     <link rel="stylesheet" href="css/hero-styles.css">
     <link rel="stylesheet" href="css/typing-animation.css">
     <link rel="stylesheet" href="css/landing-animation.css">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            margin-bottom: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .hero-tag span {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hero-headline h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Make sure header is above particles */
+        header {
+            position: relative;
+            z-index: 3;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,26 +109,20 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-circle circle-1"></div>
-            <div class="hero-circle circle-2"></div>
-            <div class="hero-circle circle-3"></div>
-        </div>
-        <div class="hero-flex-container">
-            <div class="hero-content">
-                <div class="hero-headline">
-                    <div class="hero-tag">
-                        <span>Innovative</span>
-                        <span>Creative</span>
-                        <span>Impactful</span>
-                    </div>
-                    <h1>Our Portfolio
-                        <span class="gradient-text">Our Work</span>
-                    </h1>
-                </div>
-                <div class="hero-description">
-                    <p>Explore our collection of successful projects and innovative solutions that have helped businesses transform and grow.</p>
-                </div>
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span>Creative</span>
+                <span>Innovative</span>
+                <span>Impactful</span>
+            </div>
+            <div class="hero-headline">
+                <h1>Our Portfolio
+                    <span class="gradient-text">Showcasing Excellence</span>
+                </h1>
+            </div>
+            <div class="hero-description">
+                <p>Explore our collection of successful projects that demonstrate our commitment to innovation and excellence in digital solutions.</p>
             </div>
         </div>
     </section>
@@ -73,11 +146,11 @@
             }
             ?>
 
-            <div class="portfolio-grid">
-                <?php foreach ($portfolio_items as $item): ?>
+            <div class="portfolio-grid" data-total-items="<?php echo count($portfolio_items); ?>">
+                <?php foreach (array_slice($portfolio_items, 0, 8) as $item): ?>
                     <div class="portfolio-item <?php echo htmlspecialchars($item['category']); ?>">
                         <img src="<?php echo htmlspecialchars($item['image_path']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
-                        <div class="portfolio-overlay">
+                        <div class="portfolio-overlay" id="portfolio-overlay-always-visible">
                             <h3><?php echo htmlspecialchars($item['title']); ?></h3>
                             <p><?php echo htmlspecialchars($item['description']); ?></p>
                             <?php if (!empty($item['project_url'])):
@@ -98,7 +171,9 @@
             </div>
 
             <div class="text-center mt-4">
-                <button class="btn btn-primary">View More</button>
+                <?php if (count($portfolio_items) > 6): ?>
+                    <button class="btn btn-primary" id="load-more-portfolio">View More</button>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -165,6 +240,7 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
     <script>
         // Navigation handling
         document.addEventListener('DOMContentLoaded', function() {
@@ -176,6 +252,99 @@
                     window.location.href = page;
                 });
             });
+        });
+    </script>
+
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: {
+                            value: 80,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: '#ffffff'
+                        },
+                        shape: {
+                            type: 'circle'
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: false,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 2,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#ffffff',
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false,
+                            attract: {
+                                enable: true,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: 140,
+                                line_linked: {
+                                    opacity: 0.5
+                                }
+                            },
+                            push: {
+                                particles_nb: 4
+                            }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
         });
     </script>
 </body>

@@ -39,6 +39,7 @@
 </head>
 
 <body>
+
     <?php include 'header.php'; ?>
 
     <!-- Hero Section -->
@@ -90,7 +91,7 @@
                 </div>
             </div>
         </div>
-       
+
         <div class="particles-container" id="particles-js"></div>
     </section>
 
@@ -384,68 +385,50 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Our Portfolio</h2>
             </div>
 
+            <?php
+            require_once 'config/database.php';
 
+            try {
+                $stmt = $pdo->query("SELECT * FROM portfolio_items ORDER BY created_at DESC LIMIT 8");
+                $portfolio_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                echo "Error fetching portfolio items: " . $e->getMessage();
+                $portfolio_items = [];
+            }
+            ?>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item web">
-                    <img src="images/portfolio-1.jpg" alt="E-commerce platform">
-                    <div class="portfolio-overlay">
-                        <h3>E-commerce Platform</h3>
-                        <p>Web Development, UX/UI Design</p>
+            <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                <?php foreach ($portfolio_items as $index => $item): ?>
+                    <div class="portfolio-item <?php echo htmlspecialchars($item['category']); ?>">
+                        <img src="<?php echo htmlspecialchars($item['image_path']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                        <div class="portfolio-overlay" id="portfolio-overlay-always-visible">
+                            <h3><?php echo htmlspecialchars($item['title']); ?></h3>
+                            <p><?php echo htmlspecialchars($item['description']); ?></p>
+                            <?php if (!empty($item['project_url'])):
+                                $project_url = $item['project_url'];
+                                // Remove http:// or https:// if present
+                                $project_url = preg_replace('#^https?://#', '', $project_url);
+                                // Remove localhost/DEV/ if present
+                                $project_url = str_replace('localhost/DEV/', '', $project_url);
+                            ?>
+                                <a href="https://<?php echo htmlspecialchars($project_url); ?>" class="project-btn" target="_blank">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                </div>
-
-                <div class="portfolio-item mobile">
-                    <img src="images/portfolio-2.jpg" alt="Health & Fitness App">
-                    <div class="portfolio-overlay">
-                        <h3>Health & Fitness App</h3>
-                        <p>Mobile Development, iOS, Android</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item software">
-                    <img src="images/portfolio-3.jpg" alt="Inventory Management System">
-                    <div class="portfolio-overlay">
-                        <h3>Inventory Management System</h3>
-                        <p>Custom Software, Database Design</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item web">
-                    <img src="images/portfolio-4.jpg" alt="Financial Services Website">
-                    <div class="portfolio-overlay">
-                        <h3>Financial Services Website</h3>
-                        <p>Web Development, Security</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item mobile">
-                    <img src="images/portfolio-5.jpg" alt="Food Delivery App">
-                    <div class="portfolio-overlay">
-                        <h3>Food Delivery App</h3>
-                        <p>Mobile Development, Payment Integration</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item software">
-                    <img src="images/portfolio-6.jpg" alt="CRM Solution">
-                    <div class="portfolio-overlay">
-                        <h3>CRM Solution</h3>
-                        <p>Custom Software, Data Analytics</p>
-                    </div>
-                </div>
-
-
+                <?php endforeach; ?>
             </div>
 
             <div class="text-center mt-4">
-                <button class="btn btn-primary">View More</button>
+                <a href="portfolio.php" class="btn btn-primary">View More</a>
             </div>
         </div>
     </section>
@@ -617,7 +600,7 @@
                             <span>Contact us for advance solutions</span>
                         </div>
                     </div>
-                    <button class="btn-order contact">CONTACT US</button>
+                    <button class="btn-order contact" onclick="window.location.href='#contact'" style="transition: all 0.3s ease; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">CONTACT US</button>
                 </div>
             </div>
         </div>
