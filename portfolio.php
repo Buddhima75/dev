@@ -147,8 +147,8 @@
             ?>
 
             <div class="portfolio-grid" data-total-items="<?php echo count($portfolio_items); ?>">
-                <?php foreach (array_slice($portfolio_items, 0, 8) as $item): ?>
-                    <div class="portfolio-item <?php echo htmlspecialchars($item['category']); ?>">
+                <?php foreach (array_slice($portfolio_items, 0, 6) as $item): ?>
+                    <div class="portfolio-item <?php echo htmlspecialchars($item['category']); ?>" data-item-id="<?php echo htmlspecialchars($item['id']); ?>">
                         <img src="<?php echo htmlspecialchars($item['image_path']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         <div class="portfolio-overlay" id="portfolio-overlay-always-visible">
                             <h3><?php echo htmlspecialchars($item['title']); ?></h3>

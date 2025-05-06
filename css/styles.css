@@ -899,7 +899,7 @@ a:hover {
 .service-features {
   padding: 5rem 0;
   position: relative;
-  background: white;
+  
   margin-top: -2rem;
   z-index: 10;
   width: 100%;
@@ -2281,7 +2281,7 @@ a:hover {
 
 .contact-info-item.full-width {
     grid-column: 1 / -1;
-    max-width: calc(50% - 15px);
+    max-width: calc(50% - 1px);
     margin: 0 auto;
 }
 
@@ -3174,5 +3174,465 @@ textarea.form-control {
 @media screen and (max-width: 576px) {
     .map-frame {
         min-height: 350px;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(270deg, 
+        #60a5fa 0%, 
+        #3b82f6 25%,
+        #2563eb 50%,
+        #3b82f6 75%,
+        #60a5fa 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #3b82f6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: fit-content;
+    animation: 
+        typing 6s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+        blink 1s step-end infinite;
+}
+
+@keyframes typing {
+    0% { 
+        width: 0;
+        opacity: 0;
+    }
+    10% {
+        width: 0;
+        opacity: 1;
+    }
+    30%, 80% { 
+        width: fit-content;
+        opacity: 1;
+    }
+    90%, 100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent; 
+    }
+    50% { 
+        border-color: #3b82f6; 
+    }
+}
+
+.hero-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.hero-headline h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Customer Anticipations Section */
+.anticipations-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #60a5fa;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    background: rgba(96, 165, 250, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.anticipations-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.world-map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+}
+
+.world-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* SVG Styling */
+.world-map svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
+}
+
+.world-map svg path {
+    transition: all 0.3s ease;
+}
+
+.world-map svg .country {
+    fill: #1e293b;
+    stroke: #3b82f6;
+    stroke-width: 0.5;
+}
+
+.world-map svg .country:hover {
+    fill: #3b82f6;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+
+.world-map svg .highlight {
+    fill: #3b82f6;
+    opacity: 0.6;
+    animation: pulse 2s infinite;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #3b82f6;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.stat-number .counter {
+    display: inline-block;
+}
+
+.stat-number .plus,
+.stat-number .percentage {
+    font-size: 2rem;
+    color: #60a5fa;
+}
+
+.stat-label {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+}
+
+/* Counter Animation */
+.counter {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.stat-card:nth-child(1) .counter { animation-delay: 0.2s; }
+.stat-card:nth-child(2) .counter { animation-delay: 0.4s; }
+.stat-card:nth-child(3) .counter { animation-delay: 0.6s; }
+.stat-card:nth-child(4) .counter { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .anticipations-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .world-map-container {
+        padding-bottom: 60%;
+    }
+
+    .stats-grid {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-number .plus,
+    .stat-number .percentage {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .world-map-container {
+        padding-bottom: 75%;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Reviews Section Styles */
+.reviews-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-slider {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.review-card {
+    min-width: 350px;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    animation: slideReviews 30s linear infinite;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.review-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f1f5f9;
+}
+
+@media screen and (max-width: 768px) {
+    .review-profile-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .review-profile-img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.review-header h3 {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.rating i {
+    color: #fbbf24;
+    font-size: 1rem;
+}
+
+.rating .far.fa-star {
+    color: #e2e8f0;
+}
+
+.review-text {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@keyframes slideReviews {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.reviews-slider:hover .review-card {
+    animation-play-state: paused;
+}
+
+/* Clone reviews for seamless loop */
+.reviews-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #f8fafc);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .review-card {
+        min-width: 300px;
+        padding: 1.5rem;
+    }
+
+    .review-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .rating i {
+        font-size: 0.9rem;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .review-card {
+        min-width: 280px;
+        padding: 1.25rem;
+    }
+
+    .review-header h3 {
+        font-size: 1rem;
+    }
+
+    .rating i {
+        font-size: 0.8rem;
+    }
+
+    .review-text {
+        font-size: 0.85rem;
     }
 }

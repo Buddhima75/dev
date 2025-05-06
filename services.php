@@ -61,6 +61,8 @@
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
+            margin-top: 10%;
+
         }
 
         .hero-tag {
@@ -220,7 +222,7 @@
     </section>
 
     <!-- Service Features Section -->
-    <div style="position: relative; z-index: 100; background: white; width: 100%; display: block; padding: 80px 0; margin-top: -2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); visibility: visible; overflow: visible;">
+    <div style="position: relative; z-index: 100; background: transparent; width: 100%; display: block; padding: 80px 0; margin-top: -2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); visibility: visible; overflow: visible;">
         <div style="width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; display: block;">
             <div style="margin-bottom: 2.5rem; text-align: center; display: block;">
                 <h2 style="display: block; font-size: 2.5rem; margin: 0.5rem 0; color: #1e293b;">Our Core Services</h2>

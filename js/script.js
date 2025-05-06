@@ -205,4 +205,39 @@ document.addEventListener('DOMContentLoaded', function() {
     animateSections.forEach(section => {
         animateOnScrollObserver.observe(section);
     });
+
+    // Counter Animation
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 50; // Adjust speed by changing divisor
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = Math.round(target);
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.round(current);
+            }
+        }, 30);
+    }
+
+    // Initialize counters when they come into view
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.textContent);
+                animateCounter(counter, target);
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    // Observe all counter elements
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => counterObserver.observe(counter));
+    });
 }); 

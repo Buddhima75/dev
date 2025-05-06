@@ -35,6 +35,99 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .hero {
+            position: relative;
+            margin-bottom: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .hero-tag span {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hero-headline h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Make sure header is above particles */
+        header {
+            position: relative;
+            z-index: 3;
+        }
+
+        .footer {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-section {
+            margin-bottom: 0;
+            padding-bottom: 4rem;
+        }
     </style>
 </head>
 
@@ -44,55 +137,45 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Creative Hero Layout -->
-        <div class="hero-background">
-            <div class="hero-circle circle-1"></div>
-            <div class="hero-circle circle-2"></div>
-            <div class="hero-circle circle-3"></div>
-        </div>
-
-        <div class="container">
-            <div class="hero-flex-container">
-                <div class="hero-content">
-                    <div class="hero-tag"><span>Innovative</span> <span>Powerful</span> <span>Intelligent</span></div>
-                    <div class="hero-headline">
-                        <h1>Transforming Concepts into</h1>
-                        <div class="creative-title">
-                            <span class="highlight">Unreal Creations</span>
-                        </div>
-                    </div>
-                    <div class="hero-description">
-                        <div class="accent-line"></div>
-                        <p>At DevLK, we manage the entire development lifecycle, from idea conceptualization to final deployment and beyond. Our structured approach ensures that every project is handled with precision and care, delivering exceptional results on time and within budget.</p>
-                    </div>
-                    <div class="hero-btns">
-                        <a href="#services" class="btn btn-animated">
-                            <span class="btn-text">Our Services</span>
-                            <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary btn-animated">
-                            <span class="btn-text">Get in Touch</span>
-                        </a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">8+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">200+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                    </div>
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span>Innovative</span>
+                <span>Powerful</span>
+                <span>Intelligent</span>
+            </div>
+            <div class="hero-headline">
+                <h1>Transforming Concepts into
+                    <span class="gradient-text">Unreal Creations</span>
+                </h1>
+            </div>
+            <div class="hero-description">
+                <p>At DevLK, we manage the entire development lifecycle, from idea conceptualization to final deployment and beyond. Our structured approach ensures that every project is handled with precision and care, delivering exceptional results on time and within budget.</p>
+            </div>
+            <div class="hero-btns">
+                <a href="#services" class="btn btn-animated">
+                    <span class="btn-text">Our Services</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-animated">
+                    <span class="btn-text">Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
                 </div>
             </div>
         </div>
-
-        <div class="particles-container" id="particles-js"></div>
     </section>
 
     <!-- Service Features Section -->
@@ -433,6 +516,12 @@
         </div>
     </section>
 
+    <!-- Customer Anticipations Section -->
+
+
+    <!-- Customer Reviews Section -->
+
+
     <!-- Pricing Packages Section -->
     <section class="pricing-section section">
         <div class="container">
@@ -608,7 +697,156 @@
 
     <!-- Team Section -->
 
+    <section class="anticipations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WORLDWIDE CUSTOMERS</span>
+                <h2>Customer Anticipations</h2>
+                <p class="section-description">Elevate your industry with our specialized AI solutions, meticulously designed to address unique challenges and drive transformative innovation.</p>
+            </div>
 
+            <div class="anticipations-content">
+                <div class="world-map-container">
+                    <div class="world-map">
+                        <?php include 'world.svg'; ?>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <span class="counter">100</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="stat-label">Clients</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <span class="counter">100</span>
+                            <span class="percentage">%</span>
+                        </div>
+                        <div class="stat-label">Positive Feedback</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <span class="counter">5</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-number">
+                            <span class="counter">100</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <div class="stat-label">University Projects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">TESTIMONIALS</span>
+                <h2>Customer Reviews</h2>
+                <p class="section-description">What Our Clients Say About Us</p>
+            </div>
+
+            <div class="reviews-slider">
+                <?php
+                // Database connection
+                require_once 'config/database.php';
+
+                try {
+                    // Fetch reviews from database
+                    $stmt = $pdo->query("SELECT * FROM reviews ORDER BY created_at DESC");
+                    $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    // If no reviews found, show placeholder reviews
+                    if (empty($reviews)) {
+                        $placeholder_reviews = [
+                            [
+                                'name' => 'John Smith',
+                                'comment' => 'Exceptional service! The team went above and beyond to deliver our project on time. Their attention to detail and innovative solutions exceeded our expectations.',
+                                'rating' => 5
+                            ],
+                            [
+                                'name' => 'Sarah Johnson',
+                                'comment' => 'Working with this team was a fantastic experience. They transformed our vision into reality with great professionalism and expertise.',
+                                'rating' => 5
+                            ],
+                            [
+                                'name' => 'Michael Brown',
+                                'comment' => 'Outstanding development team! They provided excellent communication throughout the project and delivered a high-quality product.',
+                                'rating' => 5
+                            ]
+                        ];
+                        $reviews = $placeholder_reviews;
+                    }
+
+                    foreach ($reviews as $review) {
+                        echo '<div class="review-card">';
+                        echo '<div class="review-header">';
+                        echo '<div class="review-header-left">';
+                        echo '<img src="images/img.png" alt="Profile" class="review-profile-img">';
+                        echo '<h3>' . htmlspecialchars($review['name']) . '</h3>';
+                        echo '</div>';
+                        echo '<div class="rating">';
+                        for ($i = 1; $i <= 5; $i++) {
+                            $starClass = $i <= $review['rating'] ? 'fas' : 'far';
+                            echo '<i class="' . $starClass . ' fa-star"></i>';
+                        }
+                        echo '</div>'; // End rating
+                        echo '</div>'; // End review-header
+                        echo '<p class="review-text">' . htmlspecialchars($review['comment']) . '</p>';
+                        echo '</div>'; // End review-card
+                    }
+                } catch (PDOException $e) {
+                    // If database error occurs, show placeholder reviews
+                    $placeholder_reviews = [
+                        [
+                            'name' => 'John Smith',
+                            'comment' => 'Exceptional service! The team went above and beyond to deliver our project on time. Their attention to detail and innovative solutions exceeded our expectations.',
+                            'rating' => 5
+                        ],
+                        [
+                            'name' => 'Sarah Johnson',
+                            'comment' => 'Working with this team was a fantastic experience. They transformed our vision into reality with great professionalism and expertise.',
+                            'rating' => 5
+                        ],
+                        [
+                            'name' => 'Michael Brown',
+                            'comment' => 'Outstanding development team! They provided excellent communication throughout the project and delivered a high-quality product.',
+                            'rating' => 5
+                        ]
+                    ];
+
+                    foreach ($placeholder_reviews as $review) {
+                        echo '<div class="review-card">';
+                        echo '<div class="review-header">';
+                        echo '<div class="review-header-left">';
+                        echo '<img src="images/img.png" alt="Profile" class="review-profile-img">';
+                        echo '<h3>' . htmlspecialchars($review['name']) . '</h3>';
+                        echo '</div>';
+                        echo '<div class="rating">';
+                        for ($i = 1; $i <= 5; $i++) {
+                            $starClass = $i <= $review['rating'] ? 'fas' : 'far';
+                            echo '<i class="' . $starClass . ' fa-star"></i>';
+                        }
+                        echo '</div>'; // End rating
+                        echo '</div>'; // End review-header
+                        echo '<p class="review-text">' . htmlspecialchars($review['comment']) . '</p>';
+                        echo '</div>'; // End review-card
+                    }
+                }
+                ?>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
@@ -760,111 +998,98 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize particles.js
+        window.addEventListener('load', function() {
             if (typeof particlesJS !== 'undefined') {
                 particlesJS('particles-js', {
-                    "particles": {
-                        "number": {
-                            "value": 80,
-                            "density": {
-                                "enable": true,
-                                "value_area": 800
+                    particles: {
+                        number: {
+                            value: 80,
+                            density: {
+                                enable: true,
+                                value_area: 800
                             }
                         },
-                        "color": {
-                            "value": "#ffffff"
+                        color: {
+                            value: '#ffffff'
                         },
-                        "shape": {
-                            "type": "circle",
-                            "stroke": {
-                                "width": 0,
-                                "color": "#000000"
-                            },
-                            "polygon": {
-                                "nb_sides": 5
+                        shape: {
+                            type: 'circle'
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: false,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
                             }
                         },
-                        "opacity": {
-                            "value": 0.5,
-                            "random": false,
-                            "anim": {
-                                "enable": false,
-                                "speed": 1,
-                                "opacity_min": 0.1,
-                                "sync": false
+                        size: {
+                            value: 2,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 2,
+                                size_min: 0.1,
+                                sync: false
                             }
                         },
-                        "size": {
-                            "value": 3,
-                            "random": true,
-                            "anim": {
-                                "enable": false,
-                                "speed": 40,
-                                "size_min": 0.1,
-                                "sync": false
-                            }
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#ffffff',
+                            opacity: 0.2,
+                            width: 1
                         },
-                        "line_linked": {
-                            "enable": true,
-                            "distance": 150,
-                            "color": "#ffffff",
-                            "opacity": 0.4,
-                            "width": 1
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 3,
-                            "direction": "none",
-                            "random": false,
-                            "straight": false,
-                            "out_mode": "bounce",
-                            "bounce": true,
-                            "attract": {
-                                "enable": true,
-                                "rotateX": 600,
-                                "rotateY": 1200
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false,
+                            attract: {
+                                enable: true,
+                                rotateX: 600,
+                                rotateY: 1200
                             }
                         }
                     },
-                    "interactivity": {
-                        "detect_on": "window",
-                        "events": {
-                            "onhover": {
-                                "enable": false,
-                                "mode": "repulse"
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
                             },
-                            "onclick": {
-                                "enable": true,
-                                "mode": "push"
+                            onclick: {
+                                enable: true,
+                                mode: 'push'
                             },
-                            "resize": true,
-                            "touchstart": {
-                                "enable": true,
-                                "mode": "push"
-                            },
-                            "touchmove": {
-                                "enable": true,
-                                "mode": "repulse"
-                            }
+                            resize: true
                         },
-                        "modes": {
-                            "push": {
-                                "particles_nb": 4
+                        modes: {
+                            grab: {
+                                distance: 140,
+                                line_linked: {
+                                    opacity: 0.5
+                                }
                             },
-                            "remove": {
-                                "particles_nb": 2
-                            },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
+                            push: {
+                                particles_nb: 4
                             }
                         }
                     },
-                    "retina_detect": true
+                    retina_detect: true
                 });
             }
+        });
+    </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             // Animation observer function
             const observeElements = (elements, options = {}) => {
                 const observer = new IntersectionObserver((entries) => {
