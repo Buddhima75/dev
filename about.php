@@ -185,59 +185,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/dev.png" alt="TechSphere Logo">
-                    </div>
-                    <p>We create innovative digital solutions that help businesses grow and succeed in today's competitive market.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li>Custom Software Development</li>
-                        <li>Web Development</li>
-                        <li>Mobile App Development</li>
-                        <li>Cloud Solutions</li>
-                        <li>Data Analytics</li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="portfolio.php">Portfolio</a></li>
-                        <li><a href="team.php">Our Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Subscribe</h3>
-                    <p>Subscribe to our newsletter to receive updates on our latest projects and tech insights.</p>
-                    <div class="subscribe-form">
-                        <input type="email" placeholder="Your Email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2023 TechSphere. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <!-- Scroll to Top Button -->
     <a href="#" class="scroll-top">

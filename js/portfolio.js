@@ -1,59 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Portfolio JS loaded');
+    
     const portfolioGrid = document.querySelector('.portfolio-grid');
+    console.log('Portfolio grid:', portfolioGrid);
+    
     const loadMoreBtn = document.getElementById('load-more-portfolio');
-    const totalItems = parseInt(portfolioGrid.dataset.totalItems);
-    let currentItems = 6;
-    let loadedItemIds = new Set(); // Keep track of loaded item IDs
-
-    // Get initial item IDs
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-        const itemId = item.dataset.itemId;
-        if (itemId) {
-            loadedItemIds.add(itemId);
+    console.log('Load more button:', loadMoreBtn);
+    
+    const allItems = document.querySelectorAll('.portfolio-item');
+    console.log('Total items found:', allItems.length);
+    
+    // Initially hide items beyond the first 8
+    allItems.forEach((item, index) => {
+        if (index >= 8) {
+            item.classList.add('hidden');
         }
     });
 
+    // Add click event to load more button
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-            // Make an AJAX request to get more items
-            fetch('get_more_portfolio.php?offset=' + currentItems)
-                .then(response => response.json())
-                .then(data => {
-                    // Filter out any items we've already loaded
-                    const newItems = data.filter(item => !loadedItemIds.has(item.id.toString()));
-                    
-                    // Append new items to the grid
-                    newItems.forEach(item => {
-                        loadedItemIds.add(item.id.toString());
-                        const portfolioItem = document.createElement('div');
-                        portfolioItem.className = `portfolio-item ${item.category}`;
-                        portfolioItem.dataset.itemId = item.id;
-                        portfolioItem.innerHTML = `
-                            <img src="${item.image_path}" alt="${item.title}">
-                            <div class="portfolio-overlay" id="portfolio-overlay-always-visible">
-                                <h3>${item.title}</h3>
-                                <p>${item.description}</p>
-                                ${item.project_url ? `
-                                    <a href="https://${item.project_url}" class="project-btn" target="_blank">
-                                        <span>View Project</span>
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                ` : ''}
-                            </div>
-                        `;
-                        portfolioGrid.appendChild(portfolioItem);
-                    });
-
-                    currentItems += newItems.length;
-
-                    // Hide the button if all items are loaded
-                    if (currentItems >= totalItems) {
-                        loadMoreBtn.style.display = 'none';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading more portfolio items:', error);
-                });
+        loadMoreBtn.addEventListener('click', () => {
+            console.log('Load more button clicked');
+            
+            // Show all hidden items
+            document.querySelectorAll('.portfolio-item.hidden').forEach(item => {
+                item.classList.remove('hidden');
+            });
+            
+            // Hide the button
+            loadMoreBtn.parentElement.style.display = 'none';
+            console.log('Button hidden');
         });
+    } else {
+        console.log('Load more button not found');
     }
 }); 

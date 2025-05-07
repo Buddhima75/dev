@@ -181,6 +181,38 @@
             width: 100%;
             padding: 2rem;
         }
+
+        .service-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%) !important;
+            color: white !important;
+            transform: scale(1.1) !important;
+        }
+
+        .service-card:hover h3 {
+            color: #2563eb !important;
+            transform: translateX(5px) !important;
+        }
+
+        .service-card:hover div[style*="position: absolute"] {
+            transform: scaleX(1) !important;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -207,7 +239,7 @@
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">6+</span>
-                    <span class="stat-label">Core Services</span>
+                    <span class="stat-label">Services</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">100%</span>
@@ -222,42 +254,42 @@
     </section>
 
     <!-- Service Features Section -->
-    <div style="position: relative; z-index: 100; background: transparent; width: 100%; display: block; padding: 80px 0; margin-top: -2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); visibility: visible; overflow: visible;">
-        <div style="width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; display: block;">
+    <div style="position: relative; z-index: 100; background: transparent; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); display: block; padding: 80px 0; margin-top: -2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); visibility: visible; overflow: visible;">
+        <div style="width: 95%; max-width: 1400px; margin: 0 auto; padding: 0 15px; display: block;">
             <div style="margin-bottom: 2.5rem; text-align: center; display: block;">
                 <h2 style="display: block; font-size: 2.5rem; margin: 0.5rem 0; color: #1e293b;">Our Core Services</h2>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 100%; margin: 0 auto;">
-                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
-                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.8rem; color: #2563eb;">
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(4, minmax(280px, 1fr)); gap: 1.5rem; max-width: 100%; margin: 0 auto;">
+                <div class="feature-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.4rem; color: #2563eb;">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; display: block;">Custom Web Development Solutions</h3>
-                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; flex: 1; display: block;">At DevLK, we specialize in creating custom-built websites tailored to meet your business's unique needs. Whether you need a sleek portfolio site, a high-performing e-commerce platform, or a complex web application, our team ensures a seamless design and user-friendly experience.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; display: block;">Custom Web Development Solutions</h3>
+                    <p style="color: #64748b; font-size: 0.875rem; line-height: 1.5; margin-bottom: 0; flex: 1; display: block;">At DevLK, we specialize in creating custom-built websites tailored to meet your business's unique needs. Whether you need a sleek portfolio site, a high-performing e-commerce platform, or a complex web application, our team ensures a seamless design and user-friendly experience.</p>
                 </div>
 
-                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
-                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.8rem; color: #2563eb;">
+                <div class="feature-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.4rem; color: #2563eb;">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; display: block;">Mobile App Development</h3>
-                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; flex: 1; display: block;">Transform your ideas into powerful mobile applications with our app development services. Whether it's a native app for Android/iOS or a cross-platform solution, we design intuitive, feature-rich apps that provide seamless functionality and engaging user experiences.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; display: block;">Mobile App Development</h3>
+                    <p style="color: #64748b; font-size: 0.875rem; line-height: 1.5; margin-bottom: 0; flex: 1; display: block;">Transform your ideas into powerful mobile applications with our app development services. Whether it's a native app for Android/iOS or a cross-platform solution, we design intuitive, feature-rich apps that provide seamless functionality and engaging user experiences.</p>
                 </div>
 
-                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
-                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.8rem; color: #2563eb;">
+                <div class="feature-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.4rem; color: #2563eb;">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; display: block;">Client-Centric Approach</h3>
-                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; flex: 1; display: block;">We believe that collaboration and communication are at the heart of every successful project. At DevLK, we prioritize understanding your goals and keeping you involved at every stage of the development process. From initial consultations to final delivery, we ensure transparency.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; display: block;">Client-Centric Approach</h3>
+                    <p style="color: #64748b; font-size: 0.875rem; line-height: 1.5; margin-bottom: 0; flex: 1; display: block;">We believe that collaboration and communication are at the heart of every successful project. At DevLK, we prioritize understanding your goals and keeping you involved at every stage of the development process. From initial consultations to final delivery, we ensure transparency.</p>
                 </div>
 
-                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
-                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.8rem; color: #2563eb;">
+                <div class="feature-card" style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: all 0.4s ease; position: relative; overflow: hidden; height: 100%; width: 100%; border: 1px solid rgba(230, 230, 230, 0.7); display: flex; flex-direction: column;">
+                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.4rem; color: #2563eb;">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; display: block;">Robust Security and Maintenance</h3>
-                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; flex: 1; display: block;">Your digital assets deserve the best protection and care. DevLK offers robust security features for all websites and apps we create, including SSL certificates, secure coding practices, and regular updates. Our post-launch maintenance services ensure your platform remains optimized.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; display: block;">Robust Security and Maintenance</h3>
+                    <p style="color: #64748b; font-size: 0.875rem; line-height: 1.5; margin-bottom: 0; flex: 1; display: block;">Your digital assets deserve the best protection and care. DevLK offers robust security features for all websites and apps we create, including SSL certificates, secure coding practices, and regular updates. Our post-launch maintenance services ensure your platform remains optimized.</p>
                 </div>
             </div>
         </div>
@@ -269,112 +301,66 @@
             <div class="section-title">
                 <h2>Our Services</h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
+            <div class="services-grid" style="opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out;">
+                <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; cursor: pointer;">
+                    <div class="service-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #2563eb; transition: all 0.3s ease;">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Custom Software Development</h3>
-                    <p>We build tailored software solutions designed to meet your unique business requirements and challenges.</p>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1e293b; transition: all 0.3s ease;">Custom Software Development</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; transition: all 0.3s ease;">We build tailored software solutions designed to meet your unique business requirements and challenges.</p>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; cursor: pointer;">
+                    <div class="service-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #2563eb; transition: all 0.3s ease;">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Web Development</h3>
-                    <p>From responsive websites to complex web applications, we create engaging online experiences that deliver results.</p>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1e293b; transition: all 0.3s ease;">Web Development</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; transition: all 0.3s ease;">From responsive websites to complex web applications, we create engaging online experiences that deliver results.</p>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; cursor: pointer;">
+                    <div class="service-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #2563eb; transition: all 0.3s ease;">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Mobile App Development</h3>
-                    <p>We develop intuitive, high-performance mobile applications for iOS and Android platforms.</p>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1e293b; transition: all 0.3s ease;">Mobile App Development</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; transition: all 0.3s ease;">We develop intuitive, high-performance mobile applications for iOS and Android platforms.</p>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; cursor: pointer;">
+                    <div class="service-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #2563eb; transition: all 0.3s ease;">
                         <i class="fas fa-server"></i>
                     </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Our cloud expertise helps businesses scale efficiently and securely in AWS, Azure, or Google Cloud environments.</p>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1e293b; transition: all 0.3s ease;">Cloud Solutions</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; transition: all 0.3s ease;">Our cloud expertise helps businesses scale efficiently and securely in AWS, Azure, or Google Cloud environments.</p>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; cursor: pointer;">
+                    <div class="service-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #2563eb; transition: all 0.3s ease;">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Data Analytics</h3>
-                    <p>Transform your data into actionable insights with our advanced analytics and business intelligence solutions.</p>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1e293b; transition: all 0.3s ease;">Data Analytics</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; transition: all 0.3s ease;">Transform your data into actionable insights with our advanced analytics and business intelligence solutions.</p>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="service-card" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; cursor: pointer;">
+                    <div class="service-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #2563eb; transition: all 0.3s ease;">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Protect your digital assets with our comprehensive security assessments and implementation services.</p>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #1e293b; transition: all 0.3s ease;">Cybersecurity</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; transition: all 0.3s ease;">Protect your digital assets with our comprehensive security assessments and implementation services.</p>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #2563eb, #60a5fa); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/dev.png" alt="TechSphere Logo">
-                    </div>
-                    <p>We create innovative digital solutions that help businesses grow and succeed in today's competitive market.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li>Custom Software Development</li>
-                        <li>Web Development</li>
-                        <li>Mobile App Development</li>
-                        <li>Cloud Solutions</li>
-                        <li>Data Analytics</li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="portfolio.php">Portfolio</a></li>
-                        <li><a href="team.php">Our Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Subscribe</h3>
-                    <p>Subscribe to our newsletter to receive updates on our latest projects and tech insights.</p>
-                    <div class="subscribe-form">
-                        <input type="email" placeholder="Your Email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2023 TechSphere. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <!-- Scroll to Top Button -->
     <a href="#" class="scroll-top">
@@ -519,6 +505,36 @@
                     },
                     retina_detect: true
                 });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('services-grid')) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+
+                            // Animate each card with delay
+                            const cards = entry.target.querySelectorAll('.service-card');
+                            cards.forEach((card, i) => {
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }, i * 100); // 100ms delay between each card
+                            });
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            // Observe the services grid
+            const servicesGrid = document.querySelector('.services-grid');
+            if (servicesGrid) {
+                observer.observe(servicesGrid);
             }
         });
     </script>

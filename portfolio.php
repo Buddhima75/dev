@@ -146,9 +146,9 @@
             }
             ?>
 
-            <div class="portfolio-grid" data-total-items="<?php echo count($portfolio_items); ?>">
-                <?php foreach (array_slice($portfolio_items, 0, 6) as $item): ?>
-                    <div class="portfolio-item <?php echo htmlspecialchars($item['category']); ?>" data-item-id="<?php echo htmlspecialchars($item['id']); ?>">
+            <div class="portfolio-grid">
+                <?php foreach ($portfolio_items as $item): ?>
+                    <div class="portfolio-item <?php echo htmlspecialchars($item['category']); ?>">
                         <img src="<?php echo htmlspecialchars($item['image_path']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         <div class="portfolio-overlay" id="portfolio-overlay-always-visible">
                             <h3><?php echo htmlspecialchars($item['title']); ?></h3>
@@ -171,7 +171,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <?php if (count($portfolio_items) > 6): ?>
+                <?php if (count($portfolio_items) > 8): ?>
                     <button class="btn btn-primary" id="load-more-portfolio">View More</button>
                 <?php endif; ?>
             </div>
@@ -179,59 +179,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="images/dev.png" alt="TechSphere Logo">
-                    </div>
-                    <p>We create innovative digital solutions that help businesses grow and succeed in today's competitive market.</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li>Custom Software Development</li>
-                        <li>Web Development</li>
-                        <li>Mobile App Development</li>
-                        <li>Cloud Solutions</li>
-                        <li>Data Analytics</li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="portfolio.php">Portfolio</a></li>
-                        <li><a href="team.php">Our Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Subscribe</h3>
-                    <p>Subscribe to our newsletter to receive updates on our latest projects and tech insights.</p>
-                    <div class="subscribe-form">
-                        <input type="email" placeholder="Your Email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2023 TechSphere. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <!-- Scroll to Top Button -->
     <a href="#" class="scroll-top">
